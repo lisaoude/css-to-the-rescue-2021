@@ -1,15 +1,18 @@
 # Procesverslag Lisa Oude Elferink
 
+<!--
 ## Week 4 - Afronding
 Bespreek je eindresultaat. ('praatje met plaatjes').
 Wat ging er soepel , wat was lastig en waar ben je trots op.
 Welke experimenten heb je gedaan die die 'mislukt' zijn.
 Heb je nieuwe inzichten hoe je de kracht CSS kunt benutten (of juist niet).
 Waar wil je meer mee gaan doen.
+-->
 
 
 
 
+<!--
 ## Week 3 - Voortgang
 Laat je voortgang zien ('praatje met plaatjes').
 Wat ging er soepel en wat was lastig.
@@ -17,10 +20,12 @@ Welke experimenten heb je gedaan die die 'mislukt' zijn.
 Heb je nieuwe inzichten hoe je de kracht CSS kunt benutten (of juist niet).
 Neem wijzigingen aan je 1e plan op.
 Waar liggen je (nieuwe) uitdagingen voor komende week.
+-->
 
 
 
 
+<!--
 ## Week 2 - Voortgang
 Laat je voortgang zien ('praatje met plaatjes').
 Wat ging er soepel en wat was lastig.
@@ -28,6 +33,7 @@ Welke experimenten heb je gedaan die die 'mislukt' zijn.
 Heb je nieuwe inzichten hoe je de kracht CSS kunt benutten (of juist niet).
 Neem wijzigingen aan je 1e plan op.
 Waar liggen je (nieuwe) uitdagingen voor komende week.
+-->
 
 
 
