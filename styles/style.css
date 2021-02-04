@@ -1,0 +1,148 @@
+/*****************************************/
+/*                GENERAL                */
+/*****************************************/
+
+* {
+    margin: 0rem;
+    padding: 0rem;
+}
+
+html {}
+
+
+body {
+    width: 90%;
+    margin: 0 auto;
+}
+
+body > header:nth-child(1) {
+    background-color: hotpink;
+}
+
+h1 {}
+
+h2 {}
+
+h3 {}
+
+p {}
+
+div {}
+
+span {}
+
+em {}
+
+main {
+    width: 90%;
+    margin: 0 auto;
+}
+
+section {}
+
+article {}
+
+header {
+    background-color: green;
+}
+
+blockquote {}
+
+cite {}
+
+
+/*****************************************/
+/*          H2 SPECIFIC STYLING          */
+/*****************************************/
+
+
+/*****************************************/
+/*          H3 SPECIFIC STYLING          */
+/*****************************************/
+
+
+/*****************************************/
+/*          P SPECIFIC STYLING           */
+/*****************************************/
+
+
+/*****************************************/
+/*         DIV SPECIFIC STYLING          */
+/*****************************************/
+
+
+/*****************************************/
+/*         SPAN SPECIFIC STYLING         */
+/*****************************************/
+
+
+/*****************************************/
+/*          EM SPECIFIC STYLING          */
+/*****************************************/
+
+
+/*****************************************/
+/*       SECTION SPECIFIC STYLING        */
+/*****************************************/
+main > section:nth-child(1) {
+    background-color: orange;
+}
+
+main > section:nth-child(2) {
+    background-color: royalblue;
+}
+
+main > section:nth-child(3) {
+    background-color: mediumpurple;
+}
+
+main > section:nth-child(4) {
+    background-color: yellow;
+}
+
+main > section:nth-child(5) {
+    background-color: grey;
+}
+
+main > section:nth-child(6) {
+    background-color: crimson;
+}
+
+main > section:nth-child(7) {
+    background-color: burlywood;
+}
+
+
+/*****************************************/
+/*        ARTICLE SPECIFIC STYLING       */
+/*****************************************/
+
+/*
+section article:nth-child(3):not(main > section:nth-child(1), section:nth-child(2), section:nth-child(3), section:nth-child(5), section:nth-child(6)) {
+    background-color: aqua;
+}
+*/
+
+/*
+section article:nth-child(2),
+main > section:nth-child(4) article:nth-child(3),
+main > section:nth-child(7) article:nth-child(3) {
+    background-color: aqua;
+}
+*/
+
+section article:nth-child(2),
+main > section:nth-child(4) article:nth-child(3),
+main > section:last-child article:nth-child(3) {
+    background-color: aqua;
+}
+
+
+/*****************************************/
+/*      BLOCKQUOTE SPECIFIC STYLING      */
+/*****************************************/
+
+
+/*****************************************/
+/*         CITE SPECIFIC STYLING         */
+/*****************************************/
