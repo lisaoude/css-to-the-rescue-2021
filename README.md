@@ -58,8 +58,8 @@ Prefers-color-scheme
 Ik kan redelijk overweg met CSS, maar ik beheer tot nu toe vooral de basics. Mijn uitdaging is 
 
 
-Welke opdracht ga je doen en voor welke opties kies je qua uitwerking.
-Met welke CSS-technieken ga je als eerste aan de slag.
-Waar liggen je (grootste) uitdagingen.
-Neem schets(en) van je ontwerp op.
-Maak wellicht ook al een eerste breakdown-schets.
+### Schetsen van ontwerp
+
+
+### Breakdown-schets
+
