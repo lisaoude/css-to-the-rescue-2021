@@ -48,10 +48,11 @@ Prefers-color-scheme
 
 ### De twee gekozen eisen
 1. Responsive zonder media queries
-2. Twee kleuren - tellen zwart en wit als kleuren?
-<!--2. SVG toepassen in shapes, masks én filters-->
+2. Twee kleuren
+Ik ga voor zwart/wit (geen kleuren :)) met een accentkleur (nog nader te bepalen)
 
 ### Met welke CSS-technieken ga je als eerste aan de slag?
+
 <!--Ik ga beginnen met het onderzoeken van de werking en de mogelijkheden van de shapes, masks en filters op een SVG. Dit heb ik nog niet eerder gedaan en ik weet ook nog niet hoe dit werkt, dus hier wil ik eerst meer over te weten komen voordat ik hiermee ga experimenteren. -->
 
 ### Waar liggen mijn grootste uitdagingen 
