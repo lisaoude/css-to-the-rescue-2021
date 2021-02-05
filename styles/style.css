@@ -7,7 +7,10 @@
     padding: 0rem;
 }
 
-html {}
+html {
+    --default-width: 12em;
+    --default-height: 8em;
+}
 
 
 body {
@@ -15,9 +18,37 @@ body {
     margin: 0 auto;
 }
 
+/* russ & daughters container */
 body > header:nth-child(1) {
-    background-color: hotpink;
+    width: calc(1.5 * var(--default-width));
+    height: calc(1.5 * var(--default-height));
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    margin: 0 auto;
+    position: sticky;
 }
+
+/* russ & daughters title */
+body > header:nth-child(1) h1 {
+    background-color: hotpink;
+    display: flex;
+    flex-direction: column;
+    padding: 0.5em;
+    text-transform: uppercase;
+}
+
+/* appetizing since 1924 */
+body > header:nth-child(1) p {
+    background-color: blue;
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+}
+
+
+
 
 h1 {}
 
@@ -131,10 +162,10 @@ main > section:nth-child(7) article:nth-child(3) {
 }
 */
 
-section article:nth-child(2),
-main > section:nth-child(4) article:nth-child(3),
-main > section:last-child article:nth-child(3) {
+section article:first-of-type {
     background-color: aqua;
+    width: var(--default-width);
+    height: var(--default-height);
 }
 
 
