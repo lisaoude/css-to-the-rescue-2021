@@ -8,8 +8,8 @@
 }
 
 html {
-    --default-width: 12em;
-    --default-height: 8em;
+    --default-width: 15em;
+    --default-height: 10em;
 }
 
 
@@ -20,8 +20,8 @@ body {
 
 /* russ & daughters container */
 body > header:nth-child(1) {
-    width: calc(1.5 * var(--default-width));
-    height: calc(1.5 * var(--default-height));
+    width: calc(2.5 * var(--default-width));
+    height: calc(2 * var(--default-height));
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -38,6 +38,7 @@ body > header:nth-child(1) h1 {
     padding: 0.5em;
     text-transform: uppercase;
     font-family: 'Lexend Mega', sans-serif;
+    font-size: 3em;
 }
 
 /* appetizing since 1924 */
@@ -70,8 +71,18 @@ section {}
 
 article {}
 
-header {
+main header {
     background-color: green;
+}
+
+main header h2 {
+    font-family: 'Lexend Mega', sans-serif;
+    font-size: 1.5em;
+}
+
+main header p {
+    font-family: 'Lexend Mega', sans-serif;
+    font-size: 1em;
 }
 
 blockquote {}
