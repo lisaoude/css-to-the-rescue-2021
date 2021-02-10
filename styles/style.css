@@ -37,6 +37,7 @@ body > header:nth-child(1) h1 {
     flex-direction: column;
     padding: 0.5em;
     text-transform: uppercase;
+    font-family: 'Lexend Mega', sans-serif;
 }
 
 /* appetizing since 1924 */
@@ -47,10 +48,6 @@ body > header:nth-child(1) p {
     padding: 1em;
 }
 
-
-
-
-h1 {}
 
 h2 {}
 
