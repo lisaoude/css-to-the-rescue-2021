@@ -41,7 +41,7 @@ body > header:nth-child(1) h1 {
     font-size: 3em;
 }
 
-/* appetizing since 1924 */
+/* appetizing since 1914 */
 body > header:nth-child(1) p {
     background-color: blue;
     display: flex;
@@ -123,33 +123,42 @@ cite {}
 /*****************************************/
 /*       SECTION SPECIFIC STYLING        */
 /*****************************************/
-main > section:nth-child(1) {
-    background-color: orange;
+
+/* SECTION ONE - NOSHES - HEADER */
+main > section:nth-of-type(odd) > header:nth-child(1) {
+    background-color: hotpink;
+    height: calc( 0.35 * var(--default-height));
+    padding: 1em;
+    margin-bottom: 1em;
 }
 
-main > section:nth-child(2) {
-    background-color: royalblue;
+/* SECTION ONE - NOSHES - HEADER - HOVER ANIMATION */
+main > section:nth-of-type(odd):hover {
+    animation-name:header-jump-animation;
+    animation-duration:0.75s;
+    animation-iteration-count:infinite;
+    animation-timing-function:cubic-bezier(0.165, 0.840, 0.440, 1.000);
+    animation-direction:alternate;
+  }
+
+/* SECTION ONE - NOSHES - ARTICLE SECTION */
+main > section:nth-of-type(even) {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    grid-template-rows: var(--default-height);
+    grid-gap: 2em;
+    margin-bottom: var(--default-height);
 }
 
-main > section:nth-child(3) {
-    background-color: mediumpurple;
+/* SECTION ONE - NOSHES - ARTICLES */
+main > section:nth-of-type(even) article {
+ padding: 1em;   
+ background-color: crimson;
 }
 
-main > section:nth-child(4) {
-    background-color: yellow;
-}
 
-main > section:nth-child(5) {
-    background-color: grey;
-}
 
-main > section:nth-child(6) {
-    background-color: crimson;
-}
 
-main > section:nth-child(7) {
-    background-color: burlywood;
-}
 
 
 /*****************************************/
@@ -170,11 +179,11 @@ main > section:nth-child(7) article:nth-child(3) {
 }
 */
 
-section article:first-of-type {
+/* section article:first-of-type {
     background-color: aqua;
     width: var(--default-width);
     height: var(--default-height);
-}
+} */
 
 
 /*****************************************/
@@ -185,3 +194,18 @@ section article:first-of-type {
 /*****************************************/
 /*         CITE SPECIFIC STYLING         */
 /*****************************************/
+
+
+
+/*****************************************/
+/*               ANIMATIONS              */
+/*****************************************/
+/* HEADER JUMP ANIMATION */
+@keyframes header-jump-animation {
+    0% {
+      transform:translateY(0);
+    }
+    100% {
+      transform:translateY(-8rem);
+    }
+  }
