@@ -97,13 +97,11 @@ Ik kan redelijk overweg met CSS, maar ik beheer tot nu toe vooral de basics. Mij
 </br>
 
 ### Schetsen van ontwerp
-![](docs/img/CSS_ontwerpschets_1.png)
-![](docs/img/CSS_ontwerpschets_2.png)
+![](docs/img/ontwerpschets.png)
 
 </br>
 
 ### Breakdown-schets
-![](docs/img/CSS_Breakdown_1.png)
-![](docs/img/CSS_Breakdown_2.png)
+![](docs/img/breakdown.png)
 
 </br>
