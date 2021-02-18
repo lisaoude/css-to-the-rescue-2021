@@ -10,6 +10,8 @@
 /* making some custom properties */
 html {
 
+  /* basic size */
+
   /* width & height for grid */
   --default-width: 15em;
   --default-height: 10em;
@@ -29,6 +31,9 @@ html {
   /* hanging items silver gradient */
   --silver-gradient-one: linear-gradient(to right, #C9C9C9 30%, #AFAFAF 70%);
   --silver-gradient-two: linear-gradient(to right, #AFAFAF 30%, #C9C9C9 70%);
+
+  /* hanging items gradient for pan */
+  --pan-gradient: radial-gradient(closest-side, #C9C9C9 30%, #AFAFAF 80%), conic-gradient(from 60deg, #696969, #DCDCDC, #696969);
 
   /* hanging items detail color */
   --detail-color: #C9C9C9;
@@ -92,17 +97,16 @@ body > div:nth-child(2) > article:nth-child(1) section:nth-child(1) {
 
 /* hole */
 body > div:nth-child(2) > article:nth-child(1) section:nth-child(1)::after {
-content: "";
-position: absolute;
-top: -0.5em;
-left: 0.25em;
-width: 0.5em;
-height: 0.5em;
-background-color: #454545;
-border-radius: 50%;
-box-shadow: var(--outline-brown);
-margin: 1em 0;
-z-index: 1;
+  content: "";
+  position: absolute;
+  top: 0.5em;
+  left: 0.25em;
+  width: 0.5em;
+  height: 0.5em;
+  background-color: #454545;
+  border-radius: 50%;
+  box-shadow: var(--outline-brown);
+  z-index: 1;
 }
 
 /* spoon 'back' */
@@ -136,7 +140,7 @@ body > div:nth-child(2) > article:nth-child(1) section:nth-child(2)::before {
 /* knife container */
 body > div:nth-child(2) > article:nth-child(2) {
   position: relative;
-  top: -1.5em;
+  top: -0.5em;
   left: 8em;
 }
 
@@ -148,21 +152,18 @@ body > div:nth-child(2) > article:nth-child(2) section:nth-child(1) {
   background-image: var(--silver-gradient-one);
   border-radius: 100% 0% 0% 100% / 100% 0% 0% 0%;
   box-shadow: var(--outline-gray);
-  margin: 1em 0;
 }
 
 /* handle */
 body > div:nth-child(2) > article:nth-child(2) section:nth-child(2) {
   position: relative;
-  top: -1.5em;
+  top: -0.5em;
   left: 1.25em;
   width: 1.75em;
   height: 7.5em;
   background-image: var(--brown-gradient-one);
   border-radius: 0% 0% 100% 100% / 0% 0% 30% 30%;
-/*   border-radius: 25% 0% 50% 50% / 50% 0% 20% 20%; */
   box-shadow: var(--outline-brown);
-  margin: 1em 0;
   z-index: -1;
 }
 
@@ -191,7 +192,7 @@ body > div:nth-child(2) > article:nth-child(3) {
   align-items:center;
   position: relative;
   left: 12em;
-  top: 0.25em;
+  top: 1.25em;
 }
 
 /* handvat */
@@ -202,7 +203,6 @@ body > div:nth-child(2) > article:nth-child(3) section:nth-child(1) {
   background-image: var(--brown-gradient-one);
   border-radius: 1em;
   box-shadow: var(--outline-brown);
-  margin: 1em 0;
 }
 
 /* ophang rondje */
@@ -235,6 +235,7 @@ body > div:nth-child(2) > article:nth-child(3) section:nth-child(1)::after {
 /* border */
 body > div:nth-child(2) > article:nth-child(3) section:nth-child(2) {
   position: relative;
+  top: 0.5em;
   width: 12em;
   height: 12em;
   background-image: var(--silver-gradient-two);
@@ -267,13 +268,35 @@ body > div:nth-child(2) > article:nth-child(3) section:nth-child(2)::after {
   border-radius: 50%;
   box-shadow: var(--outline-gray);
   z-index: 1;
-  background-image: radial-gradient(closest-side, #C9C9C9 30%, #AFAFAF 80%), conic-gradient(from 60deg, dimgrey, Gainsboro, dimgrey);
+  background-image: var(--pan-gradient);
 }
 
+/*****************************/
+/*          spatula          */
+/*****************************/
+/* already made in codepen, just need to transfer to here */
+/* and position correctly */
 
 
+/*****************************/
+/*          wok pan          */
+/*****************************/
+/* already made in codepen, just need to transfer to here */
+/* and position correctly */
 
 
+/*****************************/
+/*       butcher knife       */
+/*****************************/
+/* already made in codepen, just need to transfer to here */
+/* and position correctly */
+
+
+/*****************************/
+/*  hanging items animation  */
+/*****************************/
+/* I have an animation that's basically what i want/need */
+/* just needs some tweaking */
 
 
 
@@ -281,6 +304,8 @@ body > div:nth-child(2) > article:nth-child(3) section:nth-child(2)::after {
 /*****************************************/
 /*         RUSS & DAUGHTERS TITLE        */
 /*****************************************/
+
+/* I'm working on an svg mask for the title */
 
 /* russ & daughters container */
 body > header:nth-of-type(1) {
@@ -295,13 +320,6 @@ body > header:nth-of-type(1) {
   margin: 0 auto;
   background-color: rgba(69, 69, 69, 0.15);
 }
-
-/* body > header:nth-of-type(1) div:nth-of-type(1) {
-  width: 10em;
-  height: calc(2 * var(--default-height));
-  background-color: rgba(69, 69, 69, 0.1);
-
-} */
 
 /* russ & daughters title */
 body > header:nth-of-type(1) h1 {
@@ -326,6 +344,29 @@ body > header:nth-of-type(1) p {
 
 
 
+
+main {
+  width: 90%;
+  margin: 0 auto;
+} 
+
+main header {
+  background-color: green;
+}
+
+main header h2 {
+  font-family: var(--title-font);
+  font-size: calc( 1.5 * var(--regular-size));
+}
+
+main header p {
+  font-family: var(--title-font);
+  font-size: var(--regular-size)
+}
+
+/*****************************************/
+/*                   TBD                 */
+/*****************************************/
 /* h2 {}
 
 h3 {}
@@ -336,34 +377,13 @@ div {}
 
 span {}
 
-em {} */
+em {}
 
-main {
-  width: 90%;
-  margin: 0 auto;
-} 
-
-/* section {}
-
-article {} */
-
-main header {
-  background-color: green;
-}
-
-main header h2 {
-  font-family: 'Lexend Mega', sans-serif;
-  font-size: 1.5em;
-}
-
-main header p {
-  font-family: 'Lexend Mega', sans-serif;
-  font-size: 1em;
-}
-
-/* blockquote {}
+blockquote {}
 
 cite {} */
+
+
 
 
 /*****************************************/
@@ -400,7 +420,7 @@ cite {} */
 /*       SECTION SPECIFIC STYLING        */
 /*****************************************/
 
-/* SECTION ONE - NOSHES - HEADER */
+/* HEADER SECTIONS */
 main > section:nth-of-type(odd) > header:nth-child(1) {
   background-color: hotpink;
   height: calc( 0.35 * var(--default-height));
@@ -408,6 +428,29 @@ main > section:nth-of-type(odd) > header:nth-child(1) {
   margin-bottom: 1em;
 }
 
+/* DISHES SECTIONS */
+main > section:nth-of-type(even) {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-template-rows: var(--default-height);
+  grid-gap: 2em;
+  margin-bottom: var(--default-height);
+}
+
+/* DISHES SECTIONS - ARTICLES */
+main > section:nth-of-type(even) article {
+  padding: 1em;   
+  background-color: crimson;
+}
+
+
+
+
+/* not currently in use */
+
+/*****************************************/
+/*               ANIMATIONS              */
+/*****************************************/
 /* SECTION ONE - NOSHES - HEADER - HOVER ANIMATION */
 /* main > section:nth-of-type(odd):hover {
     animation-name:header-jump-animation;
@@ -418,67 +461,6 @@ main > section:nth-of-type(odd) > header:nth-child(1) {
 } */
 
 
-/* SECTION ONE - NOSHES - ARTICLE SECTION */
-main > section:nth-of-type(even) {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  grid-template-rows: var(--default-height);
-  grid-gap: 2em;
-  margin-bottom: var(--default-height);
-}
-
-/* SECTION ONE - NOSHES - ARTICLES */
-main > section:nth-of-type(even) article {
-  padding: 1em;   
-  background-color: crimson;
-}
-
-
-
-/***********************/
-/* PROBEERSEL KLAPMENU */
-/***********************/
-
-
-/*****************************************/
-/*        ARTICLE SPECIFIC STYLING       */
-/*****************************************/
-
-/*
-section article:nth-child(3):not(main > section:nth-child(1), section:nth-child(2), section:nth-child(3), section:nth-child(5), section:nth-child(6)) {
-    background-color: aqua;
-}
-*/
-
-/* 
-section article:nth-child(2),
-main > section:nth-child(4) article:nth-child(3),
-main > section:nth-child(7) article:nth-child(3) {
-    background-color: aqua;
-}
-
-
-section article:first-of-type {
-    background-color: aqua;
-    width: var(--default-width);
-    height: var(--default-height);
-} */
-
-
-/*****************************************/
-/*      BLOCKQUOTE SPECIFIC STYLING      */
-/*****************************************/
-
-
-/*****************************************/
-/*         CITE SPECIFIC STYLING         */
-/*****************************************/
-
-
-
-/*****************************************/
-/*               ANIMATIONS              */
-/*****************************************/
 /* HEADER JUMP ANIMATION */
 /* @keyframes header-jump-animation {
     0% {
