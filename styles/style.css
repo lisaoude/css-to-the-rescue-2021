@@ -3,54 +3,330 @@
 /*****************************************/
 
 * {
-    margin: 0rem;
-    padding: 0rem;
+  margin: 0rem;
+  padding: 0rem;
 }
 
+/* making some custom properties */
 html {
-    --default-width: 15em;
-    --default-height: 10em;
+
+  /* width & height for grid */
+  --default-width: 15em;
+  --default-height: 10em;
+
+  /* fonts */
+  --title-font: 'Lexend Mega', sans-serif;
+  --regular-font: 'Open Sans', sans-serif;
+    
+  /* font sizes */
+  --title-size: 2.5em;
+  --regular-size: 1em;
+
+  /* hanging items brown gradient */
+  --brown-gradient-one: linear-gradient(to right, #8E4F05 30%, #723D00 70%);
+  --brown-gradient-two: linear-gradient(to right, #723D00 30%, #8E4F05 70%);
+  
+  /* hanging items silver gradient */
+  --silver-gradient-one: linear-gradient(to right, #C9C9C9 30%, #AFAFAF 70%);
+  --silver-gradient-two: linear-gradient(to right, #AFAFAF 30%, #C9C9C9 70%);
+
+  /* hanging items detail color */
+  --detail-color: #C9C9C9;
+
+  /* hanging items outline colors */
+  --outline-brown: inset 0 0 0 .5px #5C3200;
+  --outline-gray: inset 0 0 0 .5px #929292;
 }
 
 
 body {
-    width: 90%;
-    margin: 0 auto;
+  width: 100%;
+  margin: 0 auto;
 }
+
+/*****************************************/
+/*             HANGING ITEMS             */
+/*****************************************/
+
+/* hanging line */
+body > div:nth-child(1) {
+  position: absolute;
+  top: 8em;
+  width: 100%;
+  height: 0.5em;
+  background-color: #454545;
+}
+
+/* all items container */
+body > div:nth-child(2) {
+  position: relative;
+  top: 6em;
+  display: flex;
+  flex-direction: row;
+  z-index: 0;
+}
+
+
+
+/*****************************/
+/*           spoon           */
+/*****************************/
+/* spoon container */
+body > div:nth-child(2) > article:nth-child(1) {
+  position: relative;
+  top: 1em;
+  left: 3em;
+}
+
+/* handle */
+body > div:nth-child(2) > article:nth-child(1) section:nth-child(1) {
+  position: relative;
+  top: 0.5em;
+  left: 1.55em;
+  width: 1em;
+  height: 10.5em;
+  background-image: var(--brown-gradient-one);
+  border-radius: 100% 100% 0% 0% / 15% 15% 0% 0%;
+  box-shadow: var(--outline-brown);
+}
+
+/* hole */
+body > div:nth-child(2) > article:nth-child(1) section:nth-child(1)::after {
+content: "";
+position: absolute;
+top: -0.5em;
+left: 0.25em;
+width: 0.5em;
+height: 0.5em;
+background-color: #454545;
+border-radius: 50%;
+box-shadow: var(--outline-brown);
+margin: 1em 0;
+z-index: 1;
+}
+
+/* spoon 'back' */
+body > div:nth-child(2) > article:nth-child(1) section:nth-child(2) {
+  position: relative;
+  width: 4em;
+  height: 5em;
+  background-image: var(--brown-gradient-one);
+  border-radius: 50%;
+  box-shadow: var(--outline-brown);
+}
+
+/* spoon middle part */
+body > div:nth-child(2) > article:nth-child(1) section:nth-child(2)::before {
+  position: absolute;
+  content: "";
+  top: 0.35em;
+  left: 0.35em;
+  width: 3.3em;
+  height: 4.3em;
+  background-image: var(--brown-gradient-two);
+  border-radius: 50%;
+  box-shadow: var(--outline-brown);
+}
+
+
+
+/*****************************/
+/*           knife           */
+/*****************************/
+/* knife container */
+body > div:nth-child(2) > article:nth-child(2) {
+  position: relative;
+  top: -1.5em;
+  left: 8em;
+}
+
+/* cutting part */
+body > div:nth-child(2) > article:nth-child(2) section:nth-child(1) {
+  position: relative;
+  width: 3em;
+  height: 10em;
+  background-image: var(--silver-gradient-one);
+  border-radius: 100% 0% 0% 100% / 100% 0% 0% 0%;
+  box-shadow: var(--outline-gray);
+  margin: 1em 0;
+}
+
+/* handle */
+body > div:nth-child(2) > article:nth-child(2) section:nth-child(2) {
+  position: relative;
+  top: -1.5em;
+  left: 1.25em;
+  width: 1.75em;
+  height: 7.5em;
+  background-image: var(--brown-gradient-one);
+  border-radius: 0% 0% 100% 100% / 0% 0% 30% 30%;
+/*   border-radius: 25% 0% 50% 50% / 50% 0% 20% 20%; */
+  box-shadow: var(--outline-brown);
+  margin: 1em 0;
+  z-index: -1;
+}
+
+/* handle details */
+body > div:nth-child(2) > article:nth-child(2) section:nth-child(2)::before {
+  content: "";
+  position: absolute;
+  top: 3.5em;
+  left: 0.55em;
+  width: 0.65em;
+  height: 0.65em;
+  background-color: var(--detail-color);
+  border-radius: 50%;
+  box-shadow: 0px 1.25em 0 0px var(--detail-color);;
+  z-index: 1;
+}
+
+
+
+/*****************************/
+/*           pan           */
+/*****************************/
+body > div:nth-child(2) > article:nth-child(3) {
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  position: relative;
+  left: 12em;
+  top: 0.25em;
+}
+
+/* handvat */
+body > div:nth-child(2) > article:nth-child(3) section:nth-child(1) {
+  position: relative;
+  width: 2em;
+  height: 8em;
+  background-image: var(--brown-gradient-one);
+  border-radius: 1em;
+  box-shadow: var(--outline-brown);
+  margin: 1em 0;
+}
+
+/* ophang rondje */
+body > div:nth-child(2) > article:nth-child(3) section:nth-child(1)::before {
+  content: "";
+  position: absolute;
+  left: 0.6em;
+  top: 0.6em;
+  width: 0.75em;
+  height: 0.75em;
+  border-radius: 50%;
+  background-color: #454545;
+  box-shadow: var(--outline-brown);
+  z-index: 1;
+}
+
+/* steeltje */
+body > div:nth-child(2) > article:nth-child(3) section:nth-child(1)::after {
+  content: "";
+  position: absolute;
+  left: 0.5em;
+  top: calc(100% - .75em);
+  width: 1em;
+  height: 3em;
+  background-image: var(--silver-gradient-one);
+  border-radius: 0.5em;
+}
+
+/* pan oppervlak */
+/* border */
+body > div:nth-child(2) > article:nth-child(3) section:nth-child(2) {
+  position: relative;
+  width: 12em;
+  height: 12em;
+  background-image: var(--silver-gradient-two);
+  border-radius: 50%;
+  box-shadow: var(--outline-gray);
+}
+
+/* groter rondje */
+body > div:nth-child(2) > article:nth-child(3) section:nth-child(2)::before {
+  content: "";
+  position: absolute;
+  top: 0.35em;
+  left: 0.35em;
+  width: 11.3em;
+  height: 11.3em;
+  background-image: var(--silver-gradient-one);
+  border-radius: 50%;
+  box-shadow: var(--outline-gray);
+  z-index: 1;
+}
+
+/* kleiner rondje */
+body > div:nth-child(2) > article:nth-child(3) section:nth-child(2)::after {
+  content: "";
+  position: absolute;
+  top: 2em;
+  left: 2em;
+  width: 8em;
+  height: 8em;
+  border-radius: 50%;
+  box-shadow: var(--outline-gray);
+  z-index: 1;
+  background-image: radial-gradient(closest-side, #C9C9C9 30%, #AFAFAF 80%), conic-gradient(from 60deg, dimgrey, Gainsboro, dimgrey);
+}
+
+
+
+
+
+
+
+
+
+/*****************************************/
+/*         RUSS & DAUGHTERS TITLE        */
+/*****************************************/
 
 /* russ & daughters container */
-body > header:nth-child(1) {
-    width: calc(2.5 * var(--default-width));
-    height: calc(2 * var(--default-height));
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    margin: 0 auto;
-    position: sticky;
+body > header:nth-of-type(1) {
+  position: relative;
+  top: -16em;
+  width: clamp(375px, 27.5%, 30%);
+  height: calc(2 * var(--default-height));
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  margin: 0 auto;
+  background-color: rgba(69, 69, 69, 0.15);
 }
 
+/* body > header:nth-of-type(1) div:nth-of-type(1) {
+  width: 10em;
+  height: calc(2 * var(--default-height));
+  background-color: rgba(69, 69, 69, 0.1);
+
+} */
+
 /* russ & daughters title */
-body > header:nth-child(1) h1 {
-    background-color: hotpink;
-    display: flex;
-    flex-direction: column;
-    padding: 0.5em;
-    text-transform: uppercase;
-    font-family: 'Lexend Mega', sans-serif;
-    font-size: 3em;
+body > header:nth-of-type(1) h1 {
+  display: flex;
+  flex-direction: column;
+  padding: 0.5em;
+  text-transform: uppercase;
+  font-family: var(--title-font);
+  font-size: var(--title-size);
 }
 
 /* appetizing since 1914 */
-body > header:nth-child(1) p {
-    background-color: blue;
-    display: flex;
-    flex-direction: column;
-    padding: 1em;
+body > header:nth-of-type(1) p {
+  /* background-color: blue; */
+  display: flex;
+  flex-direction: column;
+  font-family: var(--regular-font);
+  font-size: var(--regular-size);
+  font-weight: 300;
+  padding: 1em;
 }
 
 
-h2 {}
+
+/* h2 {}
 
 h3 {}
 
@@ -60,34 +336,34 @@ div {}
 
 span {}
 
-em {}
+em {} */
 
 main {
-    width: 90%;
-    margin: 0 auto;
-}
+  width: 90%;
+  margin: 0 auto;
+} 
 
-section {}
+/* section {}
 
-article {}
+article {} */
 
 main header {
-    background-color: green;
+  background-color: green;
 }
 
 main header h2 {
-    font-family: 'Lexend Mega', sans-serif;
-    font-size: 1.5em;
+  font-family: 'Lexend Mega', sans-serif;
+  font-size: 1.5em;
 }
 
 main header p {
-    font-family: 'Lexend Mega', sans-serif;
-    font-size: 1em;
+  font-family: 'Lexend Mega', sans-serif;
+  font-size: 1em;
 }
 
-blockquote {}
+/* blockquote {}
 
-cite {}
+cite {} */
 
 
 /*****************************************/
@@ -126,39 +402,42 @@ cite {}
 
 /* SECTION ONE - NOSHES - HEADER */
 main > section:nth-of-type(odd) > header:nth-child(1) {
-    background-color: hotpink;
-    height: calc( 0.35 * var(--default-height));
-    padding: 1em;
-    margin-bottom: 1em;
+  background-color: hotpink;
+  height: calc( 0.35 * var(--default-height));
+  padding: 1em;
+  margin-bottom: 1em;
 }
 
 /* SECTION ONE - NOSHES - HEADER - HOVER ANIMATION */
-main > section:nth-of-type(odd):hover {
+/* main > section:nth-of-type(odd):hover {
     animation-name:header-jump-animation;
     animation-duration:0.75s;
     animation-iteration-count:infinite;
     animation-timing-function:cubic-bezier(0.165, 0.840, 0.440, 1.000);
     animation-direction:alternate;
-  }
+} */
+
 
 /* SECTION ONE - NOSHES - ARTICLE SECTION */
 main > section:nth-of-type(even) {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    grid-template-rows: var(--default-height);
-    grid-gap: 2em;
-    margin-bottom: var(--default-height);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-template-rows: var(--default-height);
+  grid-gap: 2em;
+  margin-bottom: var(--default-height);
 }
 
 /* SECTION ONE - NOSHES - ARTICLES */
 main > section:nth-of-type(even) article {
- padding: 1em;   
- background-color: crimson;
+  padding: 1em;   
+  background-color: crimson;
 }
 
 
 
-
+/***********************/
+/* PROBEERSEL KLAPMENU */
+/***********************/
 
 
 /*****************************************/
@@ -171,15 +450,15 @@ section article:nth-child(3):not(main > section:nth-child(1), section:nth-child(
 }
 */
 
-/*
+/* 
 section article:nth-child(2),
 main > section:nth-child(4) article:nth-child(3),
 main > section:nth-child(7) article:nth-child(3) {
     background-color: aqua;
 }
-*/
 
-/* section article:first-of-type {
+
+section article:first-of-type {
     background-color: aqua;
     width: var(--default-width);
     height: var(--default-height);
@@ -201,11 +480,11 @@ main > section:nth-child(7) article:nth-child(3) {
 /*               ANIMATIONS              */
 /*****************************************/
 /* HEADER JUMP ANIMATION */
-@keyframes header-jump-animation {
+/* @keyframes header-jump-animation {
     0% {
       transform:translateY(0);
     }
     100% {
       transform:translateY(-8rem);
     }
-  }
+  } */
