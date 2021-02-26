@@ -432,13 +432,15 @@ main > section:nth-of-type(odd) > header:nth-child(1) {
 main > section:nth-of-type(even) {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  grid-template-rows: var(--default-height);
+  /* grid-template-rows: var(--default-height); */
   grid-gap: 2em;
   margin-bottom: var(--default-height);
 }
 
 /* DISHES SECTIONS - ARTICLES */
 main > section:nth-of-type(even) article {
+  /* min height kan ook */
+  height: var(--default-height);
   padding: 1em;   
   background-color: crimson;
 }
