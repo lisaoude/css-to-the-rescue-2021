@@ -12,16 +12,19 @@ html {
 
   /* basic size */
 
-  /* width & height for grid */
+  /* width & height */
   --default-width: 15em;
   --default-height: 10em;
+
+  --header-width: clamp(375px, 27.5%, 25%);
+
 
   /* fonts */
   --title-font: 'Lexend Mega', sans-serif;
   --regular-font: 'Open Sans', sans-serif;
     
   /* font sizes */
-  --title-size: 2.5em;
+  --title-size: 2.35em;
   --regular-size: 1em;
 
   /* hanging items brown gradient */
@@ -60,6 +63,7 @@ body > div:nth-child(1) {
   width: 100%;
   height: 0.5em;
   background-color: #454545;
+  z-index: -1;
 }
 
 /* all items container */
@@ -305,42 +309,59 @@ body > div:nth-child(2) > article:nth-child(3) section:nth-child(2)::after {
 /*         RUSS & DAUGHTERS TITLE        */
 /*****************************************/
 
-/* I'm working on an svg mask for the title */
-
 /* russ & daughters container */
 body > header:nth-of-type(1) {
-  position: relative;
-  top: -16em;
-  width: clamp(375px, 27.5%, 30%);
+  width: var(--header-width);
   height: calc(2 * var(--default-height));
-  display: flex;
-  flex-direction: column;
   justify-content: center;
   text-align: center;
   margin: 0 auto;
-  background-color: rgba(69, 69, 69, 0.15);
+  z-index: 0;
 }
 
-/* russ & daughters title */
-body > header:nth-of-type(1) h1 {
+/* title container */
+body > header:nth-of-type(1) div:nth-of-type(1) {
+  position: relative;
+  top: -11em;
   display: flex;
   flex-direction: column;
   padding: 0.5em;
+  color: #ffffff;
+}
+
+/* russ & daughters title */
+body > header:nth-of-type(1) div:nth-of-type(1) h1 {
   text-transform: uppercase;
   font-family: var(--title-font);
   font-size: var(--title-size);
 }
 
 /* appetizing since 1914 */
-body > header:nth-of-type(1) p {
-  /* background-color: blue; */
-  display: flex;
-  flex-direction: column;
+body > header:nth-of-type(1) div:nth-of-type(1) p {
   font-family: var(--regular-font);
   font-size: var(--regular-size);
   font-weight: 300;
-  padding: 1em;
+  padding: 2em 0;
 }
+
+/* wooden background container */
+body > header:nth-of-type(1) div:nth-of-type(2) {
+  position: absolute;
+  top: 6em;
+  width: var(--header-width);
+  height: calc(2 * var(--default-height));
+  z-index: -1;
+}
+
+/* wooden background img */
+body > header:nth-of-type(1) div:nth-of-type(2) img {
+  clip-path: url(#headerclip);
+  width: 375px;
+  height: 246px;
+  object-fit: cover;
+}
+
+
 
 
 
