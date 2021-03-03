@@ -19,49 +19,9 @@
 </head>
 
 <body>
-
-    <!-- <div> -->
-        <!-- knife -->
-        <!-- <article>
-            <section></section>
-            <section></section>
-        </article> -->
-
-        <!-- spoon -->
-        <!-- <article>
-            <section></section>
-            <section></section>
-        </article> -->
-
-        <!-- pan -->
-        <!-- <article>
-            <section></section>
-            <section></section>
-        </article> -->
-
-        <!-- spatula -->
-        <!-- <article>
-            <section></section>
-            <section></section>
-        </article> -->
-
-        <!-- wok pan -->
-        <!-- <article>
-            <section></section>
-            <section></section>
-            <section></section>
-        </article> -->
-
-        <!-- butcher knife  -->
-        <!-- <article>
-            <section></section>
-            <section></section>
-        </article> -->
-    <!-- </div> -->
-
     <header>
         <div>
-            <!-- spoon -->
+            <!-- spatula -->
             <article>
                 <section></section>
                 <section></section>
@@ -91,6 +51,35 @@
                         <path d="M0 74.4063V43.7335C0 43.7335 15.232 36.6149 27.3087 24.5383C39.3854 12.4616 43.7335 0 43.7335 0H81.5303L293.47 0.593668H331.266C331.266 0.593668 335.615 13.0553 347.691 25.1319C359.768 37.2086 375 44.3272 375 44.3272V75V171.174V201.847C375 201.847 359.768 208.966 347.691 221.042C335.615 233.119 331 246 331 246H293.5H81.5H62.741H44C44 246 39.5833 232.723 27.5066 220.646C15.4299 208.57 0.197889 201.451 0.197889 201.451V171.174L0 74.4063Z" fill="#C4C4C4"/>
                     </clipPath>
                 </svg>
+
+
+                <!-- vraag hier maar niks over -->
+                <svg>
+                    <defs>
+                      <filter id="drop-shadow" x="-20%" y="-10%" width="140%" height="120%">
+
+                        <!-- het alpha-channel wordt 5px geblurred -->
+                        <feGaussianBlur in="SourceAlpha" stdDeviation="5"/>
+
+                        <!-- blurred alpha wordt 5px vergroot -->
+                        <feMorphology operator="dilate" radius="5" result="DILATED"/>
+                  
+                        <!-- het hele filtervlak cullen met half-doorzichtig zwart -->
+                        <feFlood flood-color="Black" flood-opacity=".5" result="COLOR"/>
+                        
+                        <!-- het kleurvlak samenvoegen met de blurred alpha -->
+                        <feComposite in="COLOR" in2="DILATED" operator="in" result="COLORSHADOW"/>
+                  
+                        <!-- de gekleurde blurred-alpha wordt gemerged met het oorspronkelijke ding-->
+                        <!-- nb de volgorde doet er toe -->
+                        <feMerge> 
+                          <feMergeNode in="COLORSHADOW"/>
+                          <feMergeNode in="SourceGraphic"/>
+                        </feMerge>
+                      </filter>
+                    </defs>
+                  </svg>
+                  
             </div>
         </div>
     </header>
@@ -105,6 +94,15 @@
         </section>
 
         <section>
+
+            <!-- pan -->
+            <article>
+                <section>
+                    <section></section>
+                    <section></section>
+                </section>
+            </article>
+
             <article>
                 <h3>Russ &amp; Daughters Knishes</h3>
                 <p>potato, carmelized onion, mustard</p>
@@ -366,6 +364,47 @@
         </section>
 
         <section>
+            
+        <article>
+            <section>
+                <!-- vraag hier maar niks over -->
+                <!-- is beter -->
+                <svg width="200" height="200" viewBox="0 0 275 275" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="112.5" cy="112.5" r="112.5" fill="url(#paint0_radial)"/>
+                    <defs>
+                        <radialGradient id="paint0_radial" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(112.5 112.5) rotate(90) scale(112.5)">
+                            <stop stop-color="#CB9C7A"/>
+                            <stop offset="0.826042" stop-color="#C08C67"/>
+                            <stop offset="1" stop-color="#B17A52"/>
+                        </radialGradient>
+                    </defs>
+                </svg>
+
+                <svg width="30" height="30" viewBox="0 0 225 225">
+                    <circle cx="112.5" cy="112.5" r="112.5" fill="#673B1D"/>
+                </svg>
+
+                <svg width="25" height="25" viewBox="0 0 225 225">
+                    <circle cx="112.5" cy="112.5" r="112.5" fill="#673B1D"/>
+                </svg>
+
+                <svg width="20" height="20" viewBox="0 0 225 225">
+                    <circle cx="112.5" cy="112.5" r="112.5" fill="#673B1D"/>
+                </svg>
+
+                <svg width="20" height="20" viewBox="0 0 225 225">
+                    <circle cx="112.5" cy="112.5" r="112.5" fill="#673B1D"/>
+                </svg>
+
+                <svg width="15" height="15" viewBox="0 0 225 225">
+                    <circle cx="112.5" cy="112.5" r="112.5" fill="#673B1D"/>
+                </svg>
+
+                        
+          </section>
+        </article>
+
+
             <blockquote>
                 <p>"A moltsayt on a tsimes iz via a mayse on a moshl."</p>
                 <p>A meal without a sweet dish is like a story without a moral.</p>
