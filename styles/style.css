@@ -13,8 +13,8 @@ html {
   /* basic size */
 
   /* width & height */
-  --default-width: 15em;
-  --default-height: 10em;
+  --default-width: 16em;
+  --default-height: 12.5em;
 
   --header-width: clamp(375px, 27.5%, 25%);
 
@@ -27,23 +27,35 @@ html {
   --title-size: 2.35em;
   --regular-size: 1em;
 
-  /* hanging items brown gradient */
+  /* default colors */
+  --dark-color: #0F0F0F;
+  --medium-color: #E2C8BE; 
+  --light-color: #ffffff;
+
+  --dark-wood: url("../img/dark_wood.png");
+  --light-wood: url("../img/light_wood.png");
+
+  /* items brown gradient */
   --brown-gradient-one: linear-gradient(to right, #8E4F05 30%, #723D00 70%);
   --brown-gradient-two: linear-gradient(to right, #723D00 30%, #8E4F05 70%);
   
-  /* hanging items silver gradient */
+  /* items silver gradient */
   --silver-gradient-one: linear-gradient(to right, #C9C9C9 30%, #AFAFAF 70%);
   --silver-gradient-two: linear-gradient(to right, #AFAFAF 30%, #C9C9C9 70%);
 
-  /* hanging items gradient for pan */
+  /* items gradient for pan */
   --pan-gradient: radial-gradient(closest-side, #C9C9C9 30%, #AFAFAF 80%), conic-gradient(from 60deg, #696969, #DCDCDC, #696969);
 
-  /* hanging items detail color */
+  /* items detail color */
   --detail-color: #C9C9C9;
 
-  /* hanging items outline colors */
+  /* items outline colors */
   --outline-brown: inset 0 0 0 .5px #5C3200;
   --outline-gray: inset 0 0 0 .5px #929292;
+  --outline-black: inset 0 0 0 .5px #000000;
+
+  /* animation duration */
+  --animation-duration: 2s;
 }
 
 
@@ -52,165 +64,31 @@ body {
   margin: 0 auto;
 }
 
-/*****************************************/
-/*             HANGING ITEMS             */
-/*****************************************/
-
-/* hanging line */
-body > div:nth-child(1) {
-  position: absolute;
-  top: 8em;
-  width: 100%;
-  height: 0.5em;
-  background-color: #454545;
-  z-index: -1;
-}
-
-/* all items container */
-body > div:nth-child(2) {
-  position: relative;
-  top: 6em;
-  display: flex;
-  flex-direction: row;
-  z-index: 0;
-}
-
-
-
-/*****************************/
-/*           spoon           */
-/*****************************/
-/* spoon container */
-body > div:nth-child(2) > article:nth-child(1) {
-  position: relative;
-  top: 1em;
-  left: 3em;
-}
-
-/* handle */
-body > div:nth-child(2) > article:nth-child(1) section:nth-child(1) {
-  position: relative;
-  top: 0.5em;
-  left: 1.55em;
-  width: 1em;
-  height: 10.5em;
-  background-image: var(--brown-gradient-one);
-  border-radius: 100% 100% 0% 0% / 15% 15% 0% 0%;
-  box-shadow: var(--outline-brown);
-}
-
-/* hole */
-body > div:nth-child(2) > article:nth-child(1) section:nth-child(1)::after {
-  content: "";
-  position: absolute;
-  top: 0.5em;
-  left: 0.25em;
-  width: 0.5em;
-  height: 0.5em;
-  background-color: #454545;
-  border-radius: 50%;
-  box-shadow: var(--outline-brown);
-  z-index: 1;
-}
-
-/* spoon 'back' */
-body > div:nth-child(2) > article:nth-child(1) section:nth-child(2) {
-  position: relative;
-  width: 4em;
-  height: 5em;
-  background-image: var(--brown-gradient-one);
-  border-radius: 50%;
-  box-shadow: var(--outline-brown);
-}
-
-/* spoon middle part */
-body > div:nth-child(2) > article:nth-child(1) section:nth-child(2)::before {
-  position: absolute;
-  content: "";
-  top: 0.35em;
-  left: 0.35em;
-  width: 3.3em;
-  height: 4.3em;
-  background-image: var(--brown-gradient-two);
-  border-radius: 50%;
-  box-shadow: var(--outline-brown);
-}
-
-
-
-/*****************************/
-/*           knife           */
-/*****************************/
-/* knife container */
-body > div:nth-child(2) > article:nth-child(2) {
-  position: relative;
-  top: -0.5em;
-  left: 8em;
-}
-
-/* cutting part */
-body > div:nth-child(2) > article:nth-child(2) section:nth-child(1) {
-  position: relative;
-  width: 3em;
-  height: 10em;
-  background-image: var(--silver-gradient-one);
-  border-radius: 100% 0% 0% 100% / 100% 0% 0% 0%;
-  box-shadow: var(--outline-gray);
-}
-
-/* handle */
-body > div:nth-child(2) > article:nth-child(2) section:nth-child(2) {
-  position: relative;
-  top: -0.5em;
-  left: 1.25em;
-  width: 1.75em;
-  height: 7.5em;
-  background-image: var(--brown-gradient-one);
-  border-radius: 0% 0% 100% 100% / 0% 0% 30% 30%;
-  box-shadow: var(--outline-brown);
-  z-index: -1;
-}
-
-/* handle details */
-body > div:nth-child(2) > article:nth-child(2) section:nth-child(2)::before {
-  content: "";
-  position: absolute;
-  top: 3.5em;
-  left: 0.55em;
-  width: 0.65em;
-  height: 0.65em;
-  background-color: var(--detail-color);
-  border-radius: 50%;
-  box-shadow: 0px 1.25em 0 0px var(--detail-color);;
-  z-index: 1;
-}
-
-
 
 /*****************************/
 /*           pan           */
 /*****************************/
-body > div:nth-child(2) > article:nth-child(3) {
+/* body > div:nth-child(2) > article:nth-child(3) {
   display:flex;
   flex-direction:column;
   align-items:center;
   position: relative;
   left: 12em;
   top: 1.25em;
-}
+} */
 
-/* handvat */
-body > div:nth-child(2) > article:nth-child(3) section:nth-child(1) {
+/* handle */
+/* body > div:nth-child(2) > article:nth-child(3) section:nth-child(1) {
   position: relative;
   width: 2em;
   height: 8em;
   background-image: var(--brown-gradient-one);
   border-radius: 1em;
   box-shadow: var(--outline-brown);
-}
+} */
 
-/* ophang rondje */
-body > div:nth-child(2) > article:nth-child(3) section:nth-child(1)::before {
+/* handle detail */
+/* body > div:nth-child(2) > article:nth-child(3) section:nth-child(1)::before {
   content: "";
   position: absolute;
   left: 0.6em;
@@ -221,10 +99,10 @@ body > div:nth-child(2) > article:nth-child(3) section:nth-child(1)::before {
   background-color: #454545;
   box-shadow: var(--outline-brown);
   z-index: 1;
-}
+} */
 
-/* steeltje */
-body > div:nth-child(2) > article:nth-child(3) section:nth-child(1)::after {
+/* middle part */
+/* body > div:nth-child(2) > article:nth-child(3) section:nth-child(1)::after {
   content: "";
   position: absolute;
   left: 0.5em;
@@ -233,11 +111,11 @@ body > div:nth-child(2) > article:nth-child(3) section:nth-child(1)::after {
   height: 3em;
   background-image: var(--silver-gradient-one);
   border-radius: 0.5em;
-}
+} */
 
-/* pan oppervlak */
+/* pan surface */
 /* border */
-body > div:nth-child(2) > article:nth-child(3) section:nth-child(2) {
+/* body > div:nth-child(2) > article:nth-child(3) section:nth-child(2) {
   position: relative;
   top: 0.5em;
   width: 12em;
@@ -245,10 +123,10 @@ body > div:nth-child(2) > article:nth-child(3) section:nth-child(2) {
   background-image: var(--silver-gradient-two);
   border-radius: 50%;
   box-shadow: var(--outline-gray);
-}
+} */
 
-/* groter rondje */
-body > div:nth-child(2) > article:nth-child(3) section:nth-child(2)::before {
+/* outer circle */
+/* body > div:nth-child(2) > article:nth-child(3) section:nth-child(2)::before {
   content: "";
   position: absolute;
   top: 0.35em;
@@ -259,10 +137,10 @@ body > div:nth-child(2) > article:nth-child(3) section:nth-child(2)::before {
   border-radius: 50%;
   box-shadow: var(--outline-gray);
   z-index: 1;
-}
+} */
 
-/* kleiner rondje */
-body > div:nth-child(2) > article:nth-child(3) section:nth-child(2)::after {
+/* inner circle */
+/* body > div:nth-child(2) > article:nth-child(3) section:nth-child(2)::after {
   content: "";
   position: absolute;
   top: 2em;
@@ -273,35 +151,413 @@ body > div:nth-child(2) > article:nth-child(3) section:nth-child(2)::after {
   box-shadow: var(--outline-gray);
   z-index: 1;
   background-image: var(--pan-gradient);
-}
+} */
 
 /*****************************/
 /*          spatula          */
 /*****************************/
-/* already made in codepen, just need to transfer to here */
-/* and position correctly */
+/* spatula */
+/* body > div:nth-child(2) > article:nth-child(4){
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  margin-top: 10em;
+} */
+
+/* handle */
+/* body > div:nth-child(2) > article:nth-child(4) section:nth-child(1) {
+  position: relative;
+  width: 1.75em;
+  height: 8em;
+  background-image: linear-gradient(to right, #8E4F05 30%, #723D00 70%);
+  border-radius: 1em;
+  box-shadow: inset 0 0 0 .5px #5C3200;
+  margin: 1em 0;
+} */
+
+/* handle details */
+/* body > div:nth-child(2) > article:nth-child(4) section:nth-child(1)::before {
+  content: "";
+  position: absolute;
+  left: .5em;
+  top: .6em;
+  width: .75em;
+  height: .75em;
+  border-radius: 50%;
+  background-color: white;
+  box-shadow: inset 0 0 0 1px #5C3200;
+  z-index: 1;
+} */
+
+/* middle part */
+/* body > div:nth-child(2) > article:nth-child(4) section:nth-child(1)::after {
+  content: "";
+  position: absolute;
+  left: .35em;
+  top: calc(100% - .75em);
+  width: 1em;
+  height: 8em;
+  background-image: linear-gradient(to right, #C9C9C9 30%, #AFAFAF 70%);
+  border-radius: .5em;
+  box-shadow: inset 0 1px 2px #5F5F5F;
+} */
+
+/* scoop part */
+/* surface */
+/* body > div:nth-child(2) > article:nth-child(4) section:nth-child(2) {
+  position: relative;
+  top: 5.75em;
+  left: 0em;
+  width: 5em;
+  height: 6.5em;
+  background-image: linear-gradient(to right, #AFAFAF 20%, #C9C9C9 80%);
+  border-radius: 50% 50% 5% 5% / 50%;
+  box-shadow:inset 0 0 0 .5px #929292;
+  z-index: -1;
+} */
+
+/* surface details */
+/* body > div:nth-child(2) > article:nth-child(4) section:nth-child(2)::after {
+  content: "";
+  position: absolute;
+  left: 2.25em;
+  top: 2em;
+  width: .5em;
+  height: 3.5em;
+  border-radius: 50% / 10%;
+  background-color: white;
+  box-shadow: -1.1em 0px 0 0px white,
+              1.1em 0px 0 0px white;
+} */
 
 
 /*****************************/
 /*          wok pan          */
 /*****************************/
-/* already made in codepen, just need to transfer to here */
-/* and position correctly */
+/* body > div:nth-child(2) > article:nth-child(5) {
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  margin-top: 10em;
+} */
+
+/* handle */
+/* body > div:nth-child(2) > article:nth-child(5) section:nth-child(1) {
+  position: relative;
+  width: 4em;
+  height: 1em;
+  background-image: linear-gradient(to right, #8E4F05 30%, #723D00 70%);
+  border-radius: 1em;
+  box-shadow: inset 0 0 0 .5px #5C3200;
+  margin: 1em 0;
+} */
+
+/* handle attachments */
+/* body > div:nth-child(2) > article:nth-child(5) section:nth-child(1)::after {
+  content: "";
+  position: absolute;
+  left: .5em;
+  top: .75em;
+  width: .5em;
+  height: 1.5em;
+  background-color: #AFAFAF;
+  box-shadow: 2.5em 0px 0 0px #AFAFAF;
+  z-index: -1;
+} */
+
+/* pan surface */
+/* border */
+/* body > div:nth-child(2) > article:nth-child(5) section:nth-child(2) {
+  position: relative;
+  top: -.25em;
+  width: 12em;
+  height: 12em;
+  background-image: linear-gradient(to right, #AFAFAF 20%, #C9C9C9 80%);
+  border-radius: 50%;
+  box-shadow:inset 0 0 0 .5px #929292;
+} */
+
+/* outer circle */
+/* body > div:nth-child(2) > article:nth-child(5) section:nth-child(2)::before {
+  content: "";
+  position: absolute;
+  top: .35em;
+  left: .35em;
+  width: 11.3em;
+  height: 11.3em;
+  background-image: linear-gradient(to right, #C9C9C9 20%, #AFAFAF 80%);
+  border-radius: 50%;
+  box-shadow: inset 0 0 0 .5px #929292;
+  z-index: 1;
+} */
+
+/* inner circle */
+/* body > div:nth-child(2) > article:nth-child(5) section:nth-child(2)::after {
+  content: "";
+  position: absolute;
+  top: 4em;
+  left: 4em;
+  width: 4em;
+  height: 4em;
+  border-radius: 50%;
+  box-shadow: inset 0 0 0 .5px #929292;
+  z-index: 1;
+  background-image: radial-gradient(closest-side, #C9C9C9 30%, #AFAFAF 80%), conic-gradient(from 60deg, dimgrey, Gainsboro, dimgrey);
+} */
+
+
+/* handle 2 */
+/* body > div:nth-child(2) > article:nth-child(5) section:nth-child(3) {
+  position: relative;
+  top: -.5em;
+  width: 4em;
+  height: 1em;
+  background-image: linear-gradient(to right, #8E4F05 30%, #723D00 70%);
+  border-radius: 1em;
+  box-shadow: inset 0 0 0 .5px #5C3200;
+  margin: 1em 0;
+} */
+
+/* handle attachments 2 */
+/* body > div:nth-child(2) > article:nth-child(5) section:nth-child(3)::after {
+  content: "";
+  position: absolute;
+  left: .5em;
+  top: -1.5em;
+  width: .5em;
+  height: 1.5em;
+  background-color: #AFAFAF;
+  box-shadow: 2.5em 0px 0 0px #AFAFAF;
+  z-index: -1;
+} */
 
 
 /*****************************/
 /*       butcher knife       */
 /*****************************/
-/* already made in codepen, just need to transfer to here */
-/* and position correctly */
+/* body > div:nth-child(2) > article:nth-child(6) {
+  position: relative;
+} */
+
+/* cutting part */
+/* body > div:nth-child(2) > article:nth-child(6) section:nth-child(1) {
+  position: relative;
+  width: 6em;
+  height: 10em;
+  background-image: linear-gradient(to right, #C9C9C9 30%, #AFAFAF 70%);
+  border-radius: 5% 25% 0% 5% / 5% 15% 20% 5%;
+  box-shadow: inset 0 0 0 .5px #929292;
+  margin: 1em 0;
+} */
+
+/* circle */
+/* body > div:nth-child(2) > article:nth-child(6) section:nth-child(1)::after {
+  content: "";
+  position: absolute;
+  top: 0em;
+  left: 4.25em;
+  width: 0.75em;
+  height: 0.75em;
+  background-color: white;
+  border-radius: 50%;
+  box-shadow: inset 0 0 0 .5px #5C3200;
+  margin: 1em 0;
+  z-index: 1;
+} */
+
+
+/* handle */
+/* body > div:nth-child(2) > article:nth-child(6) section:nth-child(2){
+  position: relative;
+  top: -1.5em;
+  left: 4.25em;
+  width: 1.75em;
+  height: 7.5em;
+  background-image: linear-gradient(to right, #8E4F05 30%, #723D00 70%);
+  border-radius: 0% 0% 100% 100% / 0% 0% 30% 30%;
+  box-shadow: inset 0 0 0 .5px #5C3200;
+  margin: 1em 0;
+  z-index: -1;
+} */
+
+/* handvle details */
+/* body > div:nth-child(2) > article:nth-child(6) section:nth-child(2)::before {
+  content: "";
+  position: absolute;
+  top: 3.5em;
+  left: 0.55em;
+  width: .65em;
+  height: .65em;
+  background-color: #C9C9C9;
+  border-radius: 50%;
+  box-shadow: inset 0 0 0 .5px #5C3200;
+  margin: 1em 0;
+  z-index: 1;
+}
+
+body > div:nth-child(2) > article:nth-child(6)section:nth-child(2)::after {
+  content: "";
+  position: absolute;
+  top: 4.5em;
+  left: 0.55em;
+  width: .65em;
+  height: .65em;
+  background-color: #C9C9C9;
+  border-radius: 50%;
+  box-shadow: inset 0 0 0 .5px #5C3200;
+  margin: 1em 0;
+  z-index: 1;
+} */
+
+
+/*****************************************/
+/*             HANGING ITEMS             */
+/*****************************************/
+/* items container */
+body > header div:first-of-type {
+  position: relative;
+  top: 0;
+  left: 0;
+  /* width: calc( 2 * var(--default-width)); */
+  display: flex;
+  flex-direction: row;
+  z-index: 1;
+  margin: 0 auto; 
+}
+
+body > header div:first-of-type article {
+  width: 6em;
+  height: 24em;
+}
 
 
 /*****************************/
-/*  hanging items animation  */
+/*           spoon           */
 /*****************************/
-/* I have an animation that's basically what i want/need */
-/* just needs some tweaking */
+/* spoon container */
+body > header div:first-of-type article:first-of-type  {
+  position: relative;
+  top: -8.5em;
+  left: 29.5em;
+  transform: rotate(-50deg);
+  animation-name: spoon-animation;
+  animation-duration: var(--animation-duration);
+  animation-iteration-count:infinite;
+  animation-play-state: paused;
+  transform-origin: bottom left;
+}
 
+body > header div:first-of-type article:first-of-type:hover {
+  animation-play-state: running;
+}
+
+/* handle */
+body > header div:first-of-type article:first-of-type section:first-child {
+  position: relative;
+  top: 0.75em;
+  left: 2.4em;
+  width: 1.5em;
+  height: 15.75em;
+  background-image: var(--brown-gradient-one);
+  border-radius: 100% 100% 0% 0% / 15% 15% 0% 0%;
+  box-shadow: var(--outline-brown);
+}
+
+/* hole */
+body > header div:first-of-type article:first-of-type section:first-child::after {
+  content: "";
+  position: absolute;
+  top: 0.75em;
+  left: 0.375em;
+  width: 0.75em;
+  height: 0.75em;
+  background-color: #ffffff;
+  border-radius: 50%;
+  box-shadow: var(--outline-brown);
+  z-index: 1;
+}
+
+/* spoon 'back' */
+body > header div:first-of-type article:first-of-type section:nth-child(2) {
+  position: relative;
+  width: 6em;
+  height: 7.5em;
+  background-image: var(--brown-gradient-one);
+  border-radius: 50%;
+  box-shadow: var(--outline-brown);
+}
+
+/* spoon middle part */
+body > header div:first-of-type article:first-of-type section:nth-child(2)::before {
+  position: absolute;
+  content: "";
+  top: 0.525em;
+  left: 0.525em;
+  width: 5em;
+  height: 6.5em;
+  background-image: var(--brown-gradient-two);
+  border-radius: 50%;
+  box-shadow: var(--outline-brown);
+}
+
+
+/*****************************/
+/*           knife           */
+/*****************************/
+/* knife container */
+body > header div:first-of-type article:nth-of-type(2) {
+  position: relative;
+  top: -18em;
+  left: -2em;
+  transform: rotate(-50deg);
+  animation-name: knife-animation;
+  animation-duration: var(--animation-duration);
+  animation-iteration-count:infinite;
+  animation-play-state: paused;
+  transform-origin: center;
+}
+
+body > header div:first-of-type article:nth-of-type(2):hover {
+  animation-play-state: running;
+}
+
+
+/* cutting part */
+body > header div:first-of-type article:nth-of-type(2) section:first-child {
+  position: relative;
+  width: 4.5em;
+  height: 13em;
+  background-image: var(--silver-gradient-one);
+  border-radius: 100% 0% 0% 100% / 100% 0% 0% 0%;
+  box-shadow: var(--outline-gray);
+}
+
+/* handle */
+body > header div:first-of-type article:nth-of-type(2) section:nth-child(2) {
+  position: relative;
+  top: -0.25em;
+  left: 2.5em;
+  width: 2em;
+  height: 9em;
+  background-image: var(--brown-gradient-one);
+  border-radius: 0% 0% 100% 100% / 0% 0% 30% 30%;
+  box-shadow: var(--outline-brown);
+  z-index: -1;
+}
+
+/* handle details */
+body > header div:first-of-type article:nth-of-type(2) section:nth-child(2)::before {
+  content: "";
+  position: absolute;
+  top: 4.5em;
+  left: 0.65em;
+  width: 0.75em;
+  height: 0.75em;
+  background-color: var(--detail-color);
+  border-radius: 50%;
+  box-shadow: 0px 1.5em 0 0px var(--detail-color);
+  z-index: 1;
+}
 
 
 
@@ -311,6 +567,8 @@ body > div:nth-child(2) > article:nth-child(3) section:nth-child(2)::after {
 
 /* russ & daughters container */
 body > header:nth-of-type(1) {
+  position: relative;
+  top: -5em;
   width: var(--header-width);
   height: calc(2 * var(--default-height));
   justify-content: center;
@@ -322,7 +580,7 @@ body > header:nth-of-type(1) {
 /* title container */
 body > header:nth-of-type(1) div:nth-of-type(1) {
   position: relative;
-  top: -11em;
+  top: 8.5em;
   display: flex;
   flex-direction: column;
   padding: 0.5em;
@@ -361,19 +619,99 @@ body > header:nth-of-type(1) div:nth-of-type(2) img {
   object-fit: cover;
 }
 
+/* russ & daughters container */
+/* body > header:nth-of-type(1) {
+  position: relative;
+  top: 0em;
+  width: var(--header-width);
+  justify-content: center;
+  text-align: center;
+  margin: 0 auto;
+  z-index: 0;
+} */
+
+/* title container */
+/* body > header:nth-of-type(1) div:first-of-type {
+  position: relative;
+  top: 0em;
+  width: var(--header-width);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  margin: 0 auto;
+  padding: 0.5em;
+  color: #ffffff;
+  z-index: 0;
+} */
+
+/* body > header:nth-of-type(1) div:first-of-type {
+  width: var(--header-width);
+  height: calc(2 * var(--default-height));
+  justify-content: center;
+  text-align: center;
+  margin: 0 auto;
+  z-index: 0;
+} */
+
+/* russ & daughters title */
+/* russ & daughters title */
+/* body > header:nth-of-type(1) div > div:first-of-type {
+  position: relative;
+  top: -11em;
+  display: flex;
+  flex-direction: column;
+  padding: 0.5em;
+  color: #ffffff;
+} */
+
+
+/* body > header:nth-of-type(1) div > div:first-of-type h1 {
+  text-transform: uppercase;
+  font-family: var(--title-font);
+  font-size: var(--title-size);
+} */
+
+/* appetizing since 1914 */
+/* body > header:nth-of-type(1) div > div:first-of-type p {
+  font-family: var(--regular-font);
+  font-size: var(--regular-size);
+  font-weight: 300;
+  padding: 2em 0;
+} */
+
+/* wooden background container */
+/* body > header:nth-of-type(1) div > div:nth-of-type(2) {
+  position: absolute;
+  top: 6em;
+  width: var(--header-width);
+  height: calc(2 * var(--default-height));
+  z-index: -1;
+} */
+
+/* wooden background img */
+/* body > header:nth-of-type(1) div > div:nth-of-type(2) img {
+  clip-path: url(#headerclip);
+  width: 375px;
+  height: 246px;
+  object-fit: cover;
+} */
+
 
 
 
 
 
 main {
+  position: relative;
+  top: 8em;
   width: 90%;
   margin: 0 auto;
 } 
 
-main header {
+/* main header {
   background-color: green;
-}
+} */
 
 main header h2 {
   font-family: var(--title-font);
@@ -382,7 +720,7 @@ main header h2 {
 
 main header p {
   font-family: var(--title-font);
-  font-size: var(--regular-size)
+  font-size: var(--regular-size);
 }
 
 /*****************************************/
@@ -399,9 +737,39 @@ div {}
 span {}
 
 em {}
+*/
 
-blockquote {}
+blockquote {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: auto;
+  height: calc( 0.5 * var(--default-height));
+  padding: 1em;
+}
 
+blockquote p {
+  font-family: var(--regular-font);
+  font-size: calc( 1.2 * var(--regular-size));
+}
+
+blockquote p:first-of-type {
+  font-weight: 600;
+  margin-bottom: 0.5em;
+}
+
+blockquote p:last-of-type {
+  font-weight: 400;
+  margin-bottom: 0.75em;
+}
+
+blockquote cite {
+  font-family: var(--title-font);
+  font-size: calc( 1.25 * var(--regular-size));
+}
+
+
+/*
 cite {} */
 
 
@@ -415,17 +783,33 @@ cite {} */
 /*****************************************/
 /*          H3 SPECIFIC STYLING          */
 /*****************************************/
-
+h3 {
+  font-family: var(--title-font);
+  font-size: calc( 1.1 * var(--regular-size));
+  font-weight: 400;
+}
 
 /*****************************************/
 /*          P SPECIFIC STYLING           */
 /*****************************************/
+p {
+  font-family: var(--regular-font);
+  font-size: var(--regular-size);
+}
 
+article > p {
+  color: var(--dark-color);
+  font-weight: 600;
+}
 
 /*****************************************/
 /*         DIV SPECIFIC STYLING          */
 /*****************************************/
-
+main > section:nth-of-type(even) article div {
+  font-family: var(--title-font);
+  font-size: var(--regular-size);
+  font-weight: 600;
+}
 
 /*****************************************/
 /*         SPAN SPECIFIC STYLING         */
@@ -443,33 +827,149 @@ cite {} */
 
 /* HEADER SECTIONS */
 main > section:nth-of-type(odd) > header:nth-child(1) {
-  background-color: hotpink;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: var(--dark-wood);
+  background-size: cover;
   height: calc( 0.35 * var(--default-height));
+  width: auto;
   padding: 1em;
-  margin-bottom: 1em;
+  margin-bottom: 3em;
+  color: #ffffff;
 }
 
 /* DISHES SECTIONS */
 main > section:nth-of-type(even) {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  /* grid-template-rows: var(--default-height); */
-  grid-gap: 2em;
+  grid-template-columns: repeat(auto-fit, minmax(var(--default-width), 1fr));
+  grid-gap: 4em;
   margin-bottom: var(--default-height);
 }
 
 /* DISHES SECTIONS - ARTICLES */
 main > section:nth-of-type(even) article {
-  /* min height kan ook */
-  height: var(--default-height);
-  padding: 1em;   
-  background-color: crimson;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: var(--default-height);
+  /* background: var(--dark-color);
+  color: var(--light-color); */
+  background: var(--medium-color);
+  background-size: contain;
+  color: var(--light-color);
+  border-radius: 25px;
+}
+
+/* DISHES SECTIONS - H3 */
+main > section:nth-of-type(even) article h3 {
+  position: relative;
+  top: -1em;
+  display: flex;
+  align-items: center;
+  background: var(--dark-color);
+  background-size: contain;
+  color: var(--light-color);
+  width: auto;
+  height: 4em;
+  border-radius: 25px;
+  padding: 0.5em 1em; 
+  animation-name: h3-animation;
+  animation-duration: calc( 2 * var(--animation-duration));
+  animation-iteration-count:infinite;
+  transform-origin: center;
+}
+
+/* main > section:nth-of-type(even) article:hover {
+  animation-play-state: running;
+}  */
+
+
+/* DISHES SECTIONS - P */
+main > section:nth-of-type(even) article p {
+  display: flex;
+  align-items: center;
+  height: auto;
+  padding: 0.5em 1em; 
+} 
+
+/* DISHES SECTIONS - DIV */
+main > section:nth-of-type(even) article div {
+  display: flex;
+  align-self: flex-end;
+  align-items: center;
+  justify-content: center;
+  background: var(--dark-color);
+  background-size: contain;
+  color: var(--medium-color);
+  height: 2em;
+  width: 1em;
+  border-radius: 25px;
+  padding: 0.5em 1em; 
+  z-index: 1;
+} 
+
+
+
+/* EGGS - EGG */
+main > section:nth-of-type(8) {
+  position: relative;
 }
 
 
+/* heel ei */
+main > section:nth-of-type(8) article:first-of-type {
+  position: absolute;
+  top: -5.5em;
+  left: -1.5em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: none;
+  z-index: -1;
+}
+
+main > section:nth-of-type(8) article:first-child:hover {
+  animation-play-state: running;
+}
+
+/* ei geel */
+main > section:nth-of-type(8) article:first-child section:first-child {
+  position:relative;
+  top: 8em;
+  left: 0.5em;
+  width: 4.25em;
+  height: 4.25em;
+  z-index:1;
+  background-image:linear-gradient(90deg, #FFC46B 0%, #FF9900 75%);
+  border-radius:50%;
+  margin:1em 0;
+}
 
 
-/* not currently in use */
+main > section:nth-of-type(8) article:first-child section:nth-child(2) {
+  content:"";
+  position:relative;
+  top: -3em;
+  left: 1.3em;
+  width: 20em;
+  height: 17em;
+  background: radial-gradient(50% 50% at 50% 50%, #FFFFFF 0%, #F2EBDF 100%);
+  clip-path: path("M50.1887 84.8134C60.7806 61.8709 39.6259 36.7234 59.1588 20.7166C81.7376 2.21363 103.388 41.7446 132.131 36.7408C159.278 32.0149 165.748 -4.98078 192.74 0.564942C220.727 6.31511 212.493 42.1027 233.711 61.2626C263.573 88.2283 313.931 61.066 312.987 101.323C312.134 137.721 272.003 133.217 256.5 166.148C244.589 191.448 267.477 206.689 246.075 224.661C223.501 243.618 202.172 215.257 173.103 220.048C137.081 225.984 137.932 271.102 103.039 260.351C73.3638 251.207 85.1344 214.241 65.4621 190.185C44.6452 164.729 -0.544475 170.155 0.00496541 137.256C0.478648 108.894 38.3018 110.561 50.1887 84.8134Z");
+  animation-name: egg-animation;
+  animation-duration: calc( 50 * var(--animation-duration));
+  animation-iteration-count: infinite;
+  transform-origin: center;
+} 
+
+
+
+
+
+
+
+
+
 
 /*****************************************/
 /*               ANIMATIONS              */
@@ -492,4 +992,75 @@ main > section:nth-of-type(even) article {
     100% {
       transform:translateY(-8rem);
     }
-  } */
+} */
+
+/*****************************/
+/*      items animation      */
+/*****************************/
+/* title header knife */
+@keyframes knife-animation {
+  0% {
+    transform: rotate(-50deg);
+    animation-timing-function: ease-out;
+  }
+  25% {
+    transform: rotate(-60deg);
+    animation-timing-function: ease-in-out;
+  }
+  75% {
+    transform:rotate(-40deg);
+    animation-timing-function: ease-in;
+  }
+  100% {
+    transform:rotate(-50deg);
+  }
+}
+
+/* title header spoon */
+@keyframes spoon-animation {
+  0% {
+    transform: rotate(-50deg);
+    animation-timing-function: ease-out;
+  }
+  25% {
+    transform: rotate(-60deg);
+    animation-timing-function: ease-in-out;
+  }
+  75% {
+    transform:rotate(-40deg);
+    animation-timing-function: ease-in;
+  }
+  100% {
+    transform:rotate(-50deg);
+  }
+}
+
+/* egg */
+@keyframes egg-animation {
+  0% {
+    transform: rotate(0deg);
+    animation-timing-function: ease-out;
+  }
+
+  100% {
+    transform:rotate(360deg);
+  }
+}
+
+/* h3 */
+@keyframes h3-animation {
+  0% {
+    transform: rotate(-1.25deg);
+    animation-timing-function: ease-out;
+  }
+
+  50% {
+    transform: rotate(1.25deg);
+    animation-timing-function: ease-in-out;
+  }
+
+  100% {
+    transform:rotate(-1.25deg);
+  }
+}
+  
