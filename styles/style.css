@@ -191,7 +191,7 @@ body > header div:first-of-type article:first-of-type section:nth-child(2)::afte
   border-radius: 50% / 10%;
   background-color: var(--body-color);
   box-shadow: -1.1em 0px 0 0px var(--body-color),
-              1.1em 0px 0 0px var(--body-color);;
+              1.1em 0px 0 0px var(--body-color);
 }
 
 
